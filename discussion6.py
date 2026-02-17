@@ -73,7 +73,7 @@ class HorseRaces:
             inner keys are (str) races, inner values are (int) race times
             EXAMPLE: {'Special Week': {'Tenno Sho Fall': 16.5, 'Tenno Sho Spring': 16.3, 'Teio Sho': 17.0}}
         '''
-        pass
+        
 
 ###############################################################################
 ##### TASK 2
@@ -104,13 +104,20 @@ class HorseRaces:
             tuple of fastest race name and the time
             EXAMPLE: ('Teio Sho', 14.8)
         '''
-        pass
+        
 
 ###############################################################################
 ##### TASK 3
 ###############################################################################
         
     def horse_personal_best(self):
+        best_dict = {}
+
+        for horse in self.race_dict:
+            best_dict[horse] = self.horse_fastest_race(horse)
+
+        return best_dict
+
         '''
         Calculate the fastest race and time for each horse.
 
@@ -118,7 +125,7 @@ class HorseRaces:
             A dictionary of tuples of each horse, with their fastest race and time.
             EXAMPLE: {"Oguri Cap": ("Tenno Sho Fall", 16.6), "Mejiro McQueen": ("Tenno Sho Fall", 16.1)}
         '''
-        pass
+        
 
 ###############################################################################
 ##### TASK 4
