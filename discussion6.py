@@ -39,6 +39,22 @@ class HorseRaces:
 ##### TASK 1
 ###############################################################################
     def load_results(self, table):
+        race_dict = {}
+        headers = table[0]
+
+    
+        for row in table[1:]:
+            horse_name = row[0]
+            race_dict[horse_name] = {}
+
+        
+        for i in range(1, len(headers)):
+            race_name = headers[i]
+            race_time = float(row[i])  # convert string to float
+            race_dict[horse_name][race_name] = race_time
+
+        return race_dict
+
         '''
         Given the processed CSV (as a list of lists), populate a nested dictionary with the horse information.
 
